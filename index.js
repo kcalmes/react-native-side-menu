@@ -243,9 +243,11 @@ export default class SideMenu extends React.Component {
       </View>
     );
 
+    const containerCustomStyle = this.props.containerCustomStyle || {}
+    
     return (
       <View
-        style={styles.container}
+        style={[styles.container, containerCustomStyle]}
         onLayout={this.onLayoutChange}
       >
         {menu}
